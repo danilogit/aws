@@ -7,7 +7,7 @@ import os
 # INSTANCE_ID=
 # INSTANCE_PUBLIC_IP=0.0.0.0
 # EIP_ALLOCATION_ID=
-# EIP_SCOPE=vpc|classic
+# EIP_SCOPE=vpc|standard
 
 class ec2:
 
@@ -50,7 +50,7 @@ class ec2:
                 InstanceId = self.instanceId,
                 AllocationId=allocation_id
             )
-        elif scope == 'classic':
+        elif scope == 'standard':
              response = client.associate_address(
                 InstanceId = self.instanceId,
                 PublicIp = public_ip
