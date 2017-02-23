@@ -46,6 +46,7 @@ class ec2:
         allocation_id = os.environ['EIP_ALLOCATION_ID']
 
         try:
+            # FIXME: Allocate IP only for standard public ip, or create a force option
             if(scope == 'vpc'):
                 response = client.associate_address(
                     InstanceId=self.instanceId,
