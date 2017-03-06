@@ -8,7 +8,7 @@ class SesForward:
 
     sesClient = None
     s3Client = None
-    forwardTo = ["destination@example.com"] #os.environ['']
+    forwardTo = ["recipient@example.com"] #os.environ['']
     forwardFrom = "you@example.com"
     bucketName = ""
     bucketPrefix = ""
